@@ -1,0 +1,12 @@
+{
+  "NetworkId": 1000001,
+  "NetworkName": "Clix Galore",
+  "TrackingHolder": "&OID=",
+  "DeepLinkHolder": "AffDirectURL=",
+  "NetworkKey": "CLG",
+  "Status": 1,
+  "TimeZoneId": 1000,
+  "ClickWindowCheck": true,
+  "DuplicateTransCheck": true,
+  "GstStatusId": 100
+}

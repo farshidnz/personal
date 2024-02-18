@@ -1,0 +1,72 @@
+version: "3"
+services:
+  cr3api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cr3api
+    ports:
+      - "80:80"
+
+    # image: 752830773963.dkr.ecr.ap-southeast-2.amazonaws.com/cashrewards3-api:77c4702-337-stg
+    volumes:
+      - ${AWS_CONFIG_FOLDER}:/root/.aws:ro
+      - ./docker-entrypoint.sh:/app/docker-entrypoint.sh
+    environment:
+      - AWS_PROFILE=${AWS_PROFILE}
+      - DEPLOY_STAGE=${DEPLOY_STAGE}
+      - LOG_LEVEL=${LOG_LEVEL}
+      - ConnectionStrings__ShopgoDbContext="Data Source=${CRDB_HOST};Initial Catalog=${CRDB_DATABASE};user id=${CRDB_USERNAME};password=${CRDB_PASSWORD};Max Pool Size=1000;Column Encryption Setting=enabled;ENCRYPT=yes;trustServerCertificate=true"
+      - ConnectionStrings__ShopgoDbReadOnlyContext="Data Source=${CRDB_READONLY_HOST};Initial Catalog=${CRDB_DATABASE};user id=${CRDB_USERNAME};password=${CRDB_PASSWORD};Max Pool Size=1000;Column Encryption Setting=enabled;ENCRYPT=yes;trustServerCertificate=true"
+      - AzureAADClientId=${AzureAADClientId}
+      - AzureAADClientSecret=${AzureAADClientSecret}
+      - Config__PopularStoreOrderIds=${Config_PopularStoreOrderIds}
+      - Config__CustomTrackingMerchantList=${Config_CustomTrackingMerchantList}
+      - Config__InStoreNetworkId=${Config_InStoreNetworkId}
+      - Config__OnlineStoreNetworkId=${Config_OnlineStoreNetworkId}
+      - Config__MobileSpecificNetworkId=${Config_MobileSpecificNetworkId}
+      - Config__MerchantTierCommandTypeId=${Config_MerchantTierCommandTypeId}
+      - Config__OfferBackgroundImageDefault=${Config_OfferBackgroundImageDefault}
+      - Config__TrendingStoreInfoTable=${Config_TrendingStoreInfoTable}
+      - Config__PopularStoreInfoTable=${Config_PopularStoreInfoTable}
+      - Config__TrendingStoreS3BucketKey=${Config_TrendingStoreS3BucketKey}
+      - Config__TrendingStoreS3BucketName=${Config_TrendingStoreS3BucketName}
+      - Config__ClickCreateTopicArn=${Config_ClickCreateTopicArn}
+      - Config__MemberCreateTopicArn=${Config_MemberCreateTopicArn}
+      - Config__GiftCardBucketName=${Config_GiftCardBucketName}
+      - Config__PromotionBucketName=${Config_PromotionBucketName}
+      - Config__RedisMasters=${Config_RedisMasters}
+      - Config__AllowedCorsOrigins=${Config_AllowedCorsOrigins}
+      - Config__Transaction__CashrewardsReferAMateMerchantId=${Config_Transaction_CashrewardsReferAMateMerchantId}
+      - Config__Transaction__CashrewardsBonusMerchantId=${Config_Transaction_CashrewardsBonusMerchantId}
+      - Config__Transaction__CashrewardsActivationBonusMerchantId=${Config_Transaction_CashrewardsActivationBonusMerchantId}
+      - Config__Transaction__CashrewardsLegacyBonusMerchantId=${Config_Transaction_CashrewardsLegacyBonusMerchantId}
+      - Config__Transaction__GiftCardMerchantIds=${Config_Transaction_GiftCardMerchantIds}
+      - Transaction__EventBusName=${Transaction_EventBusName}
+      - Config__CacheConfig__CategoryDataExpiry=${Config_CacheConfig_CategoryDataExpiry}
+      - Config__CacheConfig__OfferDataExpiry=${Config_CacheConfig_OfferDataExpiry}
+      - Config__CacheConfig__CardLinkedMerchantDataExpiry=${Config_CacheConfig_CardLinkedMerchantDataExpiry}
+      - Config__CacheConfig__MerchantDataExpiry=${Config_CacheConfig_MerchantDataExpiry}
+      - Config__CacheConfig__CrApplicationKeyExpiry=${Config_CacheConfig_CrApplicationKeyExpiry}
+      - Config__CacheConfig__EarlyCacheRefreshPercentage=${Config_CacheConfig_EarlyCacheRefreshPercentage}
+      - Config__Promotion__TierTypePromotionId=${Config_Promotion_TierTypePromotionId}
+      - Config__Proxies__Search=${Config_Proxies_Search}
+      - Config__Proxies__AddCard=${Config_Proxies_AddCard}
+      - Config__Proxies__MerchantmapByAuthId=${Config_Proxies_MerchantmapByAuthId}
+      - Config__Proxies__MerchantmapByLocationId=${Config_Proxies_MerchantmapByLocationId}
+      - Config__Talkable__Environment=${Config_Talkable_Environment}
+      - Config__Talkable__ApiKey=${Config_Talkable_ApiKey}
+      - Config__PromoApp__ApiBaseAddress=${Config_PromoApp_ApiBaseAddress}
+      - Config__PromoApp__CouponValidationEndpoint=${Config_PromoApp_CouponValidationEndpoint}
+      - Config__TrueRewards__ApiKey=${Config_TrueRewards_ApiKey}
+      - Config__TrueRewards__App=${Config_TrueRewards_App}
+      - Config__TrueRewards__TokenIssuer=${Config_TrueRewards_TokenIssuer}
+      - Config__Strapi__ApiBaseAddress=${Config_Strapi_ApiBaseAddress}
+      - AWS__UserPoolClientId=${AWS_USERPOOLCLIENTID}
+      - AWS__UserPoolId=${AWS_USERPOOLID}
+      - AWS__MainSiteApiKeyName=${AWS_MainSiteApiKeyName}
+      - AWS__SQS__UpdateLeanplumMemberUrl=${AWS_SQS_UpdateLeanplumMemberUrl}
+      - AWS__SQS__UpdateMemberLeanplumEventUrl=${AWS_SQS_UpdateMemberLeanplumEventUrl}
+      - AWS__SNS__ClickCreateTopicArn=${AWS_SNS_ClickCreateTopicArn}
+      - AWS__SQS__MemberFirstClickEventUrl=${AWS_SQS_MemberFirstClickEventUrl}
+      - FeatureToggleOptions__Premium=${FeatureToggleOptions_Premium}

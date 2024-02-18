@@ -1,0 +1,797 @@
+[
+  {
+    "Key": "Pipeline",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "DevOps4"
+      }
+    ]
+  },
+  {
+    "Key": "AlternateDNS",
+    "Values": [
+      {
+        "Scope": "uat",
+        "Value": "api-uat.cashrewards.com.au,api-stg.cashrewards.com.au"
+      },
+      {
+        "Scope": "prelive",
+        "Value": "api-pre-prod.cashrewards.com.au"
+      },
+      {
+        "Scope": "live",
+        "Value": "api-prod.cashrewards.com.au"
+      }
+    ]
+  },
+  {
+    "Key": "ScalingMinCapacity",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": 1
+      },
+      {
+        "Scope": "live",
+        "Value": 10
+      }
+    ]
+  },
+  {
+    "Key": "ScalingMaxCapacity",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": 2
+      },
+      {
+        "Scope": "live",
+        "Value": 10
+      }
+    ]
+  },
+  {
+    "Key": "ScalingDesiredCount",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": 1
+      },
+      {
+        "Scope": "live",
+        "Value": 10
+      }
+    ]
+  },
+  {
+    "Key": "cpu",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": 1024
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": 2048
+      }
+    ]
+  },
+  {
+    "Key": "memoryLimitMiB",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": 2048
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": 4096
+      }
+    ]
+  },
+  {
+    "Key": "LOG_LEVEL",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "Debug"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "Information"
+      }
+    ]
+  },
+  {
+    "Key": "ShopGoDatabase",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "ShopGo_Staging"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "ShopGo"
+      }
+    ]
+  },
+  {
+    "Key": "ShopGoUserName",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "AppUsr"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "service.api3"
+      }
+    ]
+  },
+  {
+    "Key": "ShopGoPassword",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "${Secret:ShopGoPassword}"
+      }
+    ]
+  },
+  {
+    "Key": "Config_Talkable_ApiKey",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "${Secret:TalkableApiKey}"
+      }
+    ]
+  },
+  {
+    "Key": "AzureAADClientId",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "${Secret:AzureAADClientId}"
+      }
+    ]
+  },
+  {
+    "Key": "AzureAADClientSecret",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "${Secret:AzureAADClientSecret}"
+      }
+    ]
+  },
+  {
+    "Key": "Config_PopularStoreOrderIds",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "1003187"
+      }
+    ]
+  },
+  {
+    "Key": "Config_CustomTrackingMerchantList",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "1001330"
+      }
+    ]
+  },
+  {
+    "Key": "Config_InStoreNetworkId",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "1000053"
+      }
+    ]
+  },
+  {
+    "Key": "Config_OnlineStoreNetworkId",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "1000053"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "1000059"
+      }
+    ]
+  },
+  {
+    "Key": "Config_MobileSpecificNetworkId",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "1000061"
+      }
+    ]
+  },
+  {
+    "Key": "Config_MerchantTierCommandTypeId",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "101"
+      }
+    ]
+  },
+  {
+    "Key": "Config_OfferBackgroundImageDefault",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "//s3-ap-southeast-2.amazonaws.com/cashrewards.dev.test/offerBackground/OfferBackgroundImage_Default.jpg"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "//cdn.cashrewards.com.au/offerBackground/default-cashback.jpg"
+      }
+    ]
+  },
+  {
+    "Key": "Config_TrendingStoreInfoTable",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "trending-stores-api-TrendingStoresPublishFacade-N08ZMW23PZ5T"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "trending-stores-api-TrendingStoresPublishFacade-1SAVV9CYWBYPQ"
+      }
+    ]
+  },
+  {
+    "Key": "Config_PopularStoreInfoTable",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "trending-stores-api-PopularStoresPublishFacade-17JZGKSW19WFD"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "trending-stores-api-PopularStoresPublishFacade-FSDCA6UV2BIE"
+      }
+    ]
+  },
+  {
+    "Key": "Config_TrendingStoreS3BucketKey",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "config_trending_store/TrendingStoreConfig.json"
+      }
+    ]
+  },
+  {
+    "Key": "Config_TrendingStoreS3BucketName",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "cashrewards.dev.bitbucket"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "cashrewards.hub-pages"
+      }
+    ]
+  },
+  {
+    "Key": "Config_ClickCreateTopicArn",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "arn:aws:sns:ap-southeast-2:752830773963:Pangu_N_Stg_Click_Create_Update"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "arn:aws:sns:ap-southeast-2:356724879491:Pangu_N_PROD_Click_Create_Update"
+      }
+    ]
+  },
+  {
+    "Key": "Config_GiftCardBucketName",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "cashrewards.stg.hub-pages/gift-cards"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "cashrewards.prod.hub-pages/gift-cards"
+      }
+    ]
+  },
+  {
+    "Key": "Config_PromotionBucketName",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "cashrewards.stg.hub-pages"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "cashrewards.prod.hub-pages"
+      }
+    ]
+  },
+  {
+    "Key": "Config_MemberCreateTopicArn",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "arn:aws:sns:ap-southeast-2:752830773963:Pangu_N_Stg_MemberCreate"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "arn:aws:sns:ap-southeast-2:752830773963:Pangu_N_PROD_MemberCreate"
+      }
+    ]
+  },
+  {
+    "Key": "Config_RedisMasters",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "cluster.jbglup.clustercfg.apse2.cache.amazonaws.com"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "cluster-maz.wfy93b.clustercfg.apse2.cache.amazonaws.com"
+      }
+    ]
+  },
+  {
+    "Key": "Config_Transaction_CashrewardsReferAMateMerchantId",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "1002347"
+      }
+    ]
+  },
+  {
+    "Key": "Config_Transaction_CashrewardsBonusMerchantId",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "1004620"
+      }
+    ]
+  },
+  {
+    "Key": "Config_Transaction_CashrewardsActivationBonusMerchantId",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "1004621"
+      }
+    ]
+  },
+  {
+    "Key": "Config_Transaction_CashrewardsLegacyBonusMerchantId",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "1001211"
+      }
+    ]
+  },
+  {
+    "Key": "Config_Transaction_GiftCardMerchantIds",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "1001330,1001846,1001847"
+      }
+    ]
+  },
+  {
+    "Key": "Transaction_EventBusName",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "partner_transactions-dev"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "TO-DO: partner_transactions"
+      }
+    ]
+  },
+  {
+    "Key": "Config_CacheConfig_CategoryDataExpiry",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "120"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "180"
+      }
+    ]
+  },
+  {
+    "Key": "Config_CacheConfig_OfferDataExpiry",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "120"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "180"
+      }
+    ]
+  },
+  {
+    "Key": "Config_CacheConfig_CardLinkedMerchantDataExpiry",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "120"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "180"
+      }
+    ]
+  },
+  {
+    "Key": "Config_CacheConfig_MerchantDataExpiry",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "120"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "180"
+      }
+    ]
+  },
+  {
+    "Key": "Config_CacheConfig_CrApplicationKeyExpiry",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "30"
+      }
+    ]
+  },
+  {
+    "Key": "Config_CacheConfig_EarlyCacheRefreshPercentage",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "90"
+      }
+    ]
+  },
+  {
+    "Key": "Config_Promotion_TierTypePromotionId",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "122"
+      }
+    ]
+  },
+  {
+    "Key": "Config_Proxies_Search",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "https://search-dev.cashrewards.com.au/api/v1/search"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "https://search.cashrewards.com.au/api/v1/search"
+      }
+    ]
+  },
+  {
+    "Key": "Config_Proxies_AddCard",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "http://microservices-e55d9733ef3840d7.elb.ap-southeast-2.amazonaws.com:5189/"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "http://nlb-microservices-17387a84225c75e4.elb.ap-southeast-2.amazonaws.com:5188/"
+      }
+    ]
+  },
+  {
+    "Key": "Config_Proxies_MerchantmapByAuthId",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "http://microservices-e55d9733ef3840d7.elb.ap-southeast-2.amazonaws.com:5284/merchant/auth-id/"
+      }
+    ]
+  },
+  {
+    "Key": "Config_Proxies_MerchantmapByLocationId",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "http://microservices-e55d9733ef3840d7.elb.ap-southeast-2.amazonaws.com:5284/merchant/location-id/"
+      }
+    ]
+  },
+  {
+    "Key": "Config_Talkable_Environment",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "cashrewards-staging"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "cashrewards"
+      }
+    ]
+  },
+  {
+    "Key": "Config_PromoApp_ApiBaseAddress",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "https://promoapp.stg-internal.cashrewards.com.au"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "https://promoapp.internal.cashrewards.com.au"
+      }
+    ]
+  },
+  {
+    "Key": "Config_PromoApp_CouponValidationEndpoint",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "/api/v3/coupons/validate/"
+      }
+    ]
+  },
+  {
+    "Key": "Config_TrueRewards_ApiKey",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "90B738F1-FF4B-4F92-AE2A-A0E4E6614CC2"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "F040B97A-A9BE-4439-8970-7E43AB94F5BA"
+      }
+    ]
+  },
+  {
+    "Key": "Config_TrueRewards_App",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "store"
+      }
+    ]
+  },
+  {
+    "Key": "Config_TrueRewards_TokenIssuer",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "https://truerewards.com.au"
+      }
+    ]
+  },
+  {
+    "Key": "Config_Strapi_ApiBaseAddress",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "https://strapi.stg.cashrewards.com.au/"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "https://strapi.cashrewards.com.au/"
+      }
+    ]
+  },
+  {
+    "Key": "Config_Strapi_ApiBaseAddressV4",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "https://strapiv4.${Environment}.aws.cashrewards.com.au/api/"
+      }
+    ]
+  },
+  {
+    "Key": "AWS_UserPoolClientId",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "2ic7ju51172a61ujbthsnntj7k"
+      }
+    ]
+  },
+  {
+    "Key": "AWS_UserPoolId",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "ap-southeast-2_9q6TXai99"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "ap-southeast-2_vq7sN11Cr"
+      }
+    ]
+  },
+  {
+    "Key": "AWS_MainSiteApiKeyName",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "/Security/Website/RegisterUser/ApiKeyRotated"
+      }
+    ]
+  },
+  {
+    "Key": "AWS_SQS_UpdateLeanplumMemberUrl",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "https://sqs.ap-southeast-2.amazonaws.com/752830773963/SubscriberMgmt-UpdateLeanplumEnrichment-Events-stg"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "https://sqs.ap-southeast-2.amazonaws.com/356724879491/SubscriberMgmt-UpdateLeanplumEnrichment-Events-prd"
+      }
+    ]
+  },
+  {
+    "Key": "AWS_SQS_UpdateMemberLeanplumEventUrl",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "https://sqs.ap-southeast-2.amazonaws.com/752830773963/SubscriberMgmt-UpdateLeanplumEnrichment-Events-stg"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "https://sqs.ap-southeast-2.amazonaws.com/356724879491/SubscriberMgmt-UpdateLeanplumEnrichment-Events-prd"
+      }
+    ]
+  },
+  {
+    "Key": "AWS_SNS_ClickCreateTopicArn",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "arn:aws:sns:ap-southeast-2:752830773963:Pangu_N_Stg_Click_Create_Update"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "arn:aws:sns:ap-southeast-2:356724879491:Pangu_N_PROD_Click_Create_Update"
+      }
+    ]
+  },
+  {
+    "Key": "AWS_SQS_MemberFirstClickEventUrl",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "https://sqs.ap-southeast-2.amazonaws.com/752830773963/EmailCommand"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "https://sqs.ap-southeast-2.amazonaws.com/356724879491/EmailCommand"
+      }
+    ]
+  },
+  {
+    "Key": "FeatureToggleOptions_Premium",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "true"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "false"
+      }
+    ]
+  },
+  {
+    "Key": "UpdateLeanplumMemberQueueName",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "SubscriberMgmt-UpdateLeanplumEnrichment-Events-stg"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "SubscriberMgmt-UpdateLeanplumEnrichment-Events-prd"
+      }
+    ]
+  },
+  {
+    "Key": "EmailCommandQueueName",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "EmailCommand"
+      }
+    ]
+  },
+  {
+    "Key": "UnleashAPI",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "https://app.unleash-hosted.com/cerise/api"
+      }
+    ]
+  },
+  {
+    "Key": "UnleashEnvironment",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "development"
+      },
+      {
+        "Scope": "prelive|live",
+        "Value": "production"
+      }
+    ]
+  },
+  {
+    "Key": "UnleashToggleInterval",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": 5
+      }
+    ]
+  },
+  {
+    "Key": "UnleashAPIKey",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "${Secret:UNLEASH_API_KEY}"
+      }
+    ]
+  },
+  {
+    "Key": "UnleashAPPName",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "CashRewardsAPI3"
+      }
+    ]
+  },
+  {
+    "Key": "UseStrapiV4",
+    "Values": [
+      {
+        "Scope": "*",
+        "Value": "true"
+      }
+    ]
+  }
+]

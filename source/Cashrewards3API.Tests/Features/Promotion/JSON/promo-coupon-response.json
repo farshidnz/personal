@@ -1,0 +1,42 @@
+﻿{
+  "code": 200,
+  "status": "success",
+  "valid": false,
+  "terms_and_condition": "<p>some terms and conditions</p>",
+  "promotion": {
+    "bonus_value": 30,
+    "bonus_type": "percentage",
+    "rules": {
+      "member_joined_date": {
+        "after": "2021-05-19T05:21:20.517Z",
+        "before": "2021-05-28T07:21:00.000Z",
+        "required": true
+      },
+      "coupon": {
+        "equals": "josh2",
+        "required": true
+      },
+      "first_purchase_window": {
+        "max": 80,
+        "required": true
+      },
+      "sale_value": {
+        "min": 50,
+        "required": true
+      },
+      "merchant_id": {
+        "not_in": "1004078,1003469,1003776",
+        "required": true
+      },
+      "store_type": {
+        "not_in": "Instore",
+        "required": true
+      },
+      "category_id": {
+        "in": "312,309",
+        "required": true
+      }
+    }
+  },
+  "reason": "Promotion associated with coupon has ended. Promotion started on 2021-05-19T05:21:21.000Z and ended on 2021-05-28T07:21:00.000Z."
+}

@@ -1,0 +1,81 @@
+{
+  "metaTitle": "Get cashback on Mother's Day deals for every kind of mum!",
+  "metaDescription": "Your mum deserves a great gift this year – and whatever she's into, you can get it for less with Cashrewards. From flowers to gift cards to spa days or even a holiday, you can make mum's day and stack your savings with top deals plus cashback. Don't miss out – shop these Mother's Day offers now!",
+  "bannerImageUrl": "https://s3-ap-southeast-2.amazonaws.com/cashrewards.prod.hub-pages/Images/mothers-day/2021/2021-04-27-Mother'sDay-DTP-LP-Banner-1440x260.png",
+  "bannerImageTabUrl": "https://s3-ap-southeast-2.amazonaws.com/cashrewards.prod.hub-pages/Images/mothers-day/2021/2021-04-27-Mother'sDay-MOB-LP-Banner-991x452.png",
+  "bannerImageMobileUrl": "https://s3-ap-southeast-2.amazonaws.com/cashrewards.prod.hub-pages/Images/mothers-day/2021/2021-04-27-Mother'sDay-APP-LP-Banner-660x376.png",
+  "title": "Get cashback on Mother's Day deals for every kind of mum!",
+  "Description": "Your mum deserves a great gift this year – and whatever she's into, you can get it for less with Cashrewards. From flowers to gift cards to spa days or even a holiday, you can make mum's day and stack your savings with top deals plus cashback. Don't miss out – shop these Mother's Day offers now!",
+  "longDescription": "Your mum deserves a great gift this year – and whatever she's into, you can get it for less with Cashrewards. From flowers to gift cards to spa days or even a holiday, you can make mum's day and stack your savings with top deals plus cashback. Don't miss out – shop these Mother's Day offers now!",
+  "categories": [
+    {
+      "categoryTitle": "Our Top Picks",
+      "items": [
+        {
+          "itemId": 1003824,
+          "backgroundUrl": "https://s3-ap-southeast-2.amazonaws.com/cashrewards.prod.hub-pages/Images/mothers-day/2021/myer.jpg",
+          "itemType": 1
+        },
+        {
+          "itemId": 1003751,
+          "backgroundUrl": "https://s3-ap-southeast-2.amazonaws.com/cashrewards.prod.hub-pages/Images/mothers-day/2021/lancome.jpg",
+          "itemType": 1
+        },
+        {
+          "itemId": 200,
+          "backgroundUrl": "https://s3-ap-southeast-2.amazonaws.com/cashrewards.prod.hub-pages/Images/mothers-day/2021/groupon.jpg",
+          "itemType": 2
+        }
+      ]
+    },
+    {
+      "categoryTitle": "Gifting",
+      "items": [
+        {
+          "itemId": 1003434,
+          "backgroundUrl": "https://s3-ap-southeast-2.amazonaws.com/cashrewards.prod.hub-pages/Images/mothers-day/2021/amazon.jpg",
+          "itemType": 1
+        },
+        {
+          "itemId": 1004728,
+          "backgroundUrl": "https://s3-ap-southeast-2.amazonaws.com/cashrewards.prod.hub-pages/Images/mothers-day/2021/bugaboo.jpg",
+          "itemType": 1
+        },
+        {
+          "itemId": 477100,
+          "backgroundUrl": "https://s3-ap-southeast-2.amazonaws.com/cashrewards.prod.hub-pages/Images/mothers-day/2021/groupon.jpg",
+          "itemType": 2
+        },
+        {
+          "itemId": 100,
+          "backgroundUrl": "https://s3-ap-southeast-2.amazonaws.com/cashrewards.prod.hub-pages/Images/mothers-day/2021/groupon.jpg",
+          "itemType": 2
+        }
+      ]
+    },
+
+    {
+      "categoryTitle": "Fashion",
+      "items": [
+        {
+          "itemId": 1001440,
+          "backgroundUrl": "https://s3-ap-southeast-2.amazonaws.com/cashrewards.prod.hub-pages/Images/mothers-day/2021/theiconic.jpg",
+          "itemType": 1
+        },
+        {
+          "itemId": 1002971,
+          "backgroundUrl": "https://s3-ap-southeast-2.amazonaws.com/cashrewards.prod.hub-pages/Images/mothers-day/2021/nastygal.jpg",
+          "itemType": 1
+        }
+      ]
+    }
+  ],
+  "campaignSection": {
+    "order":  "top",
+    "largeHeadImageUrl": "https://s3-ap-southeast-2.amazonaws.com/cashrewards.prod.hub-pages/Images/spacer-10.png",
+    "mediumHeadImageUrl": "https://s3-ap-southeast-2.amazonaws.com/cashrewards.prod.hub-pages/Images/spacer-10.png",
+    "smallHeadImageUrl": "https://s3-ap-southeast-2.amazonaws.com/cashrewards.prod.hub-pages/Images/spacer-10.png",
+    "headSubtitle": "",
+    "campaigns": []
+  }
+}

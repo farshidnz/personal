@@ -1,0 +1,52 @@
+[
+  {
+    "OfferId": 255373,
+    "HyphenatedString": "make-a-booking-255373",
+    "MerchantHyphenatedString": "booking-com",
+    "TrackingLink": "https://click.linksynergy.com/fs-bin/click?id=n53ILgFhZLQ&offerid=255373.76&type=3&subid=0",
+    "MerchantTrackingLink": "https://www.booking.com/index.html?aid=1255290",
+    "RegularImageUrl": "//cdn.cashrewards.com/booking-com.jpg?t=637491294999499848",
+    "ClientId": 1000000,
+    "IsMerchantPaused": true
+  },
+  {
+    "OfferId": 255374,
+    "HyphenatedString": "make-a-booking-255374",
+    "MerchantHyphenatedString": "booking-com",
+    "TrackingLink": "https://click.linksynergy.com/fs-bin/click?id=n53ILgFhZLQ&offerid=255374.76&type=3&subid=0-anz",
+    "MerchantTrackingLink": "https://www.booking.com/index.html?aid=1255290",
+    "RegularImageUrl": "//cdn.cashrewards.com/booking-com.jpg?t=637491294999499848",
+    "ClientId": 1000034,
+    "IsMerchantPaused": false
+  },
+  {
+    "OfferId": 444555,
+    "HyphenatedString": "get-it-all-at-amazon-com-444555",
+    "MerchantHyphenatedString": "amazon-australia",
+    "TrackingLink": "https://click.linksynergy.com/fs-bin/click?id=n53ILgFhZLQ&offerid=444555.76&type=3&subid=0-anz",
+    "MerchantTrackingLink": "https://www.amazon.com/index.html?aid=1255290",
+    "RegularImageUrl": "//cdn.cashrewards.com/amazon-com.jpg?t=637491294999499848",
+    "ClientId": 1000000,
+    "IsMerchantPaused": false
+  },
+  {
+    "OfferId": 471150,
+    "HyphenatedString": "tasty-red-rooster-471150",
+    "MerchantHyphenatedString": "red-rooster",
+    "TrackingLink": "https://click.linksynergy.com/fs-bin/click?id=n53ILgFhZLQ&offerid=471150.76&type=3&subid=0-anz",
+    "MerchantTrackingLink": "https://www.red-rooster.com/index.html?aid=1255290",
+    "RegularImageUrl": "",
+    "ClientId": 1000000,
+    "IsMerchantPaused": false
+  },
+  {
+    "OfferId": 471150,
+    "HyphenatedString": "tasty-red-rooster-471150",
+    "MerchantHyphenatedString": "red-rooster",
+    "TrackingLink": "https://click.linksynergy.com/fs-bin/click?id=n53ILgFhZLQ&offerid=471150.76&type=3&subid=0-anz",
+    "MerchantTrackingLink": "https://www.red-rooster.com/index.html?aid=1255290",
+    "RegularImageUrl": "",
+    "ClientId": 1000034,
+    "IsMerchantPaused": false
+  }
+]

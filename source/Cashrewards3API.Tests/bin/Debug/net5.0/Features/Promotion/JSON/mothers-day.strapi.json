@@ -1,0 +1,50 @@
+﻿{
+  "id": 3,
+  "slug": "mothers-day-uat",
+  "title": "Get cashback on Mother's Day deals for every kind of mum!",
+  "description": "When we remember all the super amazing things our mums have done for us, who wouldn’t want to spoil them rotten with a super Mother’s Day gift? We’re thinking beyond the usual flowers and chocolates here, catering for the glam mum, the techy mum, the explorer mum, and every other kind of mum. Shop between 27th April - 8th May for specially boosted cashback deals on Adore Beauty, Bonds, Apple, Booking.com, Big W and First Choice Liquor. Give her the super day she deserves.",
+  "long_description": "When we remember all the super amazing things our mums have done for us, who wouldn’t want to spoil them rotten with a super Mother’s Day gift? We’re thinking beyond the usual flowers and chocolates here, catering for the glam mum, the techy mum, the explorer mum, and every other kind of mum. Shop between 27th April - 8th May for specially boosted cashback deals on Adore Beauty, Bonds, Apple, Booking.com, Big W and First Choice Liquor. Give her the super day she deserves.",
+  "published_at": "2022-05-12T02:17:52.000Z",
+  "created_at": "2022-05-12T02:11:14.000Z",
+  "updated_at": "2022-05-12T02:47:00.000Z",
+  "category": [
+    {
+      "id": 1,
+      "title": "black_friday_1",
+      "item": [
+        {
+          "id": 1,
+          "merchant_id": "123",
+          "offer_id": null,
+          "brand": "booking.com",
+          "redirect_go_page": false,
+          "background_image": null
+        },
+        {
+          "id": 2,
+          "merchant_id": null,
+          "offer_id": "2",
+          "brand": "brand 2",
+          "redirect_go_page": null,
+          "background_image": null
+        },
+        {
+          "id": 3,
+          "merchant_id": "0",
+          "offer_id": "477100",
+          "brand": "brand 3",
+          "redirect_go_page": true,
+          "background_image": null
+        },
+        {
+          "id": 4,
+          "merchant_id": "456",
+          "offer_id": null,
+          "brand": "brand 4",
+          "redirect_go_page": true,
+          "background_image": null
+        }
+      ]
+    }
+  ]
+}

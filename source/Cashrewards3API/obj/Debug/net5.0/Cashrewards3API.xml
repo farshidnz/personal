@@ -1,0 +1,875 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cashrewards3API</name>
+    </assembly>
+    <members>
+        <member name="M:Cashrewards3API.Common.Services.AwsS3Service.ReadAmazonS3Data(System.String,System.String)">
+            <summary>
+            Read a file from Amazon S3 storage, using default authorization
+            </summary>
+            <param name="fileLocation">file location</param>
+            <param name="bucket">bucket</param>
+            <exception cref="T:Amazon.S3.AmazonS3Exception">thrown if any details are incorrect</exception>
+            <returns>string content of the file</returns>
+        </member>
+        <member name="M:Cashrewards3API.Common.Services.AwsS3Service.ReadAmazonS3(System.String,System.String)">
+            <summary>
+            Read a file from Amazon S3 storage, using default authorization
+            </summary>
+            <param name="fileLocation">file location</param>
+            <param name="bucket">bucket</param>
+            <exception cref="T:Amazon.S3.AmazonS3Exception">thrown if any details are incorrect</exception>
+            <returns>GetObjectResponse with the data stream</returns>
+        </member>
+        <member name="M:Cashrewards3API.Common.Services.FeatureToggleService.DisplayFeature(Cashrewards3API.Enum.FeatureNameEnum,System.Nullable{System.Int32})">
+            <summary>
+            Displays the feature.
+            </summary>
+            <param name="featureEnum">The feature enum.</param>
+            <param name="premiumClientId">The premium client identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Common.Services.SQSService.UpdatedPremiumMemberProperty(Cashrewards3API.Common.Events.MemberPremiumUpdateProperty)">
+            <summary>
+            Updateds the premium member property.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Cashrewards3API.Common.Services.TokenValidationService.ValidateToken(System.String)">
+            <summary>
+            Validates the token .
+            </summary>
+            <param name="accessToken">The access token.</param>
+            <returns></returns>
+            <exception cref="T:Cashrewards3API.Exceptions.NotAuthorizedException"></exception>
+        </member>
+        <member name="M:Cashrewards3API.Common.Services.TrueRewardsService.GetToken(Cashrewards3API.Common.Model.AuthnRequestContext)">
+            <summary>
+            Gets the token.
+            </summary>
+            <param name="context">The context.</param>
+            <returns></returns>
+            <exception cref="T:Cashrewards3API.Exceptions.NotAuthorizedException">Email {context.Email} - Talkable not Authorized</exception>
+        </member>
+        <member name="P:Cashrewards3API.Common.RequestContext.IsMobileDevice">
+            <summary>
+            Gets a value indicating whether the request comes from a mobile device.
+            </summary>
+            <value>
+              <c>true</c> if this instance is mobile device; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Cashrewards3API.Common.RequestContext.IsFromNotifier">
+            <summary>
+            Gets a value indicating whether this instance is from notifier comming from either query parameter or user agent.
+            </summary>
+            <value>
+              <c>true</c> if this instance is from notifier; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Cashrewards3API.Common.RequestContext.IsNotExpiredToken(System.IdentityModel.Tokens.Jwt.JwtSecurityToken)">
+            <summary>
+            Determines whether [is not expired token] [the specified token].
+            </summary>
+            <param name="token">The token.</param>
+            <returns>
+              <c>true</c> if [is not expired token] [the specified token]; otherwise, <c>false</c>.
+            </returns>
+            <exception cref="T:Cashrewards3API.Exceptions.NotAuthorizedException">Expired Token</exception>
+        </member>
+        <member name="M:Cashrewards3API.Common.Utils.AwsUtil.ReadAmazonS3Data(System.String,System.String,System.String,System.String)">
+            <summary>
+            Read a file from Amazon S3 storage
+            </summary>
+            <param name="fileLocation">file location</param>
+            <param name="bucket">bucket</param>
+            <param name="accessKey">access key</param>
+            <param name="secretKey">secret key</param>
+            <exception cref="T:Amazon.S3.AmazonS3Exception">thrown if any details are incorrect</exception>
+            <returns>string content of the file</returns>
+        </member>
+        <member name="M:Cashrewards3API.Common.Utils.AwsUtil.ReadAmazonS3(System.String,System.String,System.String,System.String)">
+            <summary>
+            Read a file from Amazon S3 storage
+            </summary>
+            <param name="fileLocation">file location</param>
+            <param name="bucket">bucket</param>
+            <param name="accessKey">access key</param>
+            <param name="secretKey">secret key</param>
+            <exception cref="T:Amazon.S3.AmazonS3Exception">thrown if any details are incorrect</exception>
+            <returns>GetObjectResponse with the data stream</returns>
+        </member>
+        <member name="M:Cashrewards3API.Common.Utils.AwsUtil.ReadAmazonS3DataAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Read a file from Amazon S3 storage
+            </summary>
+            <param name="fileLocation">file location</param>
+            <param name="bucket">bucket</param>
+            <param name="accessKey">access key</param>
+            <param name="secretKey">secret key</param>
+            <exception cref="T:Amazon.S3.AmazonS3Exception">thrown if any details are incorrect</exception>
+            <returns>string content of the file</returns>
+        </member>
+        <member name="M:Cashrewards3API.Common.Utils.AwsUtil.ReadAmazonS3Async(System.String,System.String,System.String,System.String)">
+            <summary>
+            Read a file from Amazon S3 storage
+            </summary>
+            <param name="fileLocation">file location</param>
+            <param name="bucket">bucket</param>
+            <param name="accessKey">access key</param>
+            <param name="secretKey">secret key</param>
+            <exception cref="T:Amazon.S3.AmazonS3Exception">thrown if any details are incorrect</exception>
+            <returns>GetObjectResponse with the data stream</returns>
+        </member>
+        <member name="M:Cashrewards3API.Exceptions.ArgumentException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cashrewards3API.Exceptions.BadRequestException"/> class.
+            </summary>
+        </member>
+        <member name="M:Cashrewards3API.Exceptions.BadRequestException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cashrewards3API.Exceptions.BadRequestException"/> class.
+            </summary>
+        </member>
+        <member name="M:Cashrewards3API.Exceptions.NotAuthorizedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cashrewards3API.Exceptions.NotAuthorizedException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Cashrewards3API.Exceptions.NotAuthorizedException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cashrewards3API.Exceptions.NotAuthorizedException"/> class.
+            </summary>
+        </member>
+        <member name="M:Cashrewards3API.Exceptions.NotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cashrewards3API.Exceptions.NotFoundException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Cashrewards3API.Exceptions.NotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cashrewards3API.Exceptions.NotFoundException"/> class.
+            </summary>
+        </member>
+        <member name="M:Cashrewards3API.Extensions.StringExtension.ToIntOrDefault(System.String,System.Text.RegularExpressions.Regex,System.Nullable{System.Int32})">
+            <summary>
+            Returns either an integer if the string given can be converted to one or the default value provided if it cannot.
+            The potential int substring is matched via a regex pattern
+            </summary>
+            <param name="source">string that contains the potential integer</param>
+            <param name="regex">regex to match the substring containing the potential integer</param>
+            <param name="defaultValue">default value to return if an int cannot be parsed from the source string</param>
+            <returns>int or null/provided default value of int or null</returns>
+        </member>
+        <member name="M:Cashrewards3API.Extensions.StringExtension.ToIntOrDefaultInt(System.String,System.Text.RegularExpressions.Regex,System.Int32)">
+            <summary>
+            Returns either an integer if the string given can be converted to one or the default value provided if it cannot.
+            The potential int substring is matched via a regex pattern.
+            </summary>
+            <param name="source">string that contains the potential integer</param>
+            <param name="regex">regex to match the substring containing the potential integer</param>
+            <param name="defaultValue">default value to return if an int cannot be parsed from the source string</param>
+            <returns>int or provided default value of int</returns>
+        </member>
+        <member name="M:Cashrewards3API.Extensions.StringExtension.ToIntOrDefault(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Returns either an integer if the string given can be converted to one or the default value provided if it cannot.
+            </summary>
+            <param name="source">string to try and convert to an integer</param>
+            <param name="defaultValue">default value to return if an int cannot be parsed from the source string</param>
+            <returns>int or null</returns>
+        </member>
+        <member name="M:Cashrewards3API.Extensions.StringExtension.ToIntOrDefaultInt(System.String,System.Int32)">
+            <summary>
+            Returns either an integer if the string given can be converted to one or the default int value provided if it cannot.
+            </summary>
+            <param name="source">string to try and convert to an integer</param>
+            <param name="defaultValue">default value to return if an int cannot be parsed from the source string</param>
+            <returns>int or provided default value of int</returns>
+        </member>
+        <member name="M:Cashrewards3API.Extensions.StringExtension.ToIntOrNull(System.String,System.Text.RegularExpressions.Regex)">
+            <summary>
+            Returns either an integer if the string given can be converted to one or null if it cannot.
+            The potential int substring is matched via a regex pattern
+            </summary>
+            <param name="source">string that contains the potential integer</param>
+            <param name="regex">regex to match the substring containing the potential integer</param>
+            <returns>int or null</returns>
+        </member>
+        <member name="M:Cashrewards3API.Extensions.StringExtension.ToIntOrNull(System.String)">
+            <summary>
+            Returns either an integer if the string given can be converted to one or null if it cannot.
+            </summary>
+            <param name="source">string to try and convert to an integer</param>
+            <returns>int or null</returns>
+        </member>
+        <member name="M:Cashrewards3API.Extensions.StringExtension.ToIntOrZero(System.String,System.Text.RegularExpressions.Regex)">
+            <summary>
+            Returns either an integer if the string given can be converted to one or 0 if it cannot.
+            The potential int substring is matched via a regex pattern
+            </summary>
+            <param name="source">string that contains the potential integer</param>
+            <param name="regex">regex to match the substring containing the potential integer</param>
+            <returns>int or 0</returns>
+        </member>
+        <member name="M:Cashrewards3API.Extensions.StringExtension.ToIntOrZero(System.String)">
+            <summary>
+            Returns either an integer if the string given can be converted to one or 0 if it cannot.
+            </summary>
+            <param name="source">string to try and convert to an integer</param>
+            <returns>int or 0</returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Banners.Service.BannerService.GetBannersFromDb(System.Int32)">
+            <summary>
+            Gets the banners from database.
+            </summary>
+            <param name="clientsId">The clients identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Cashrewards3API.Features.BaseController.Mapper">
+            <summary>
+            Gets the mediator.
+            </summary>
+            <value>
+            The mediator.
+            </value>
+        </member>
+        <member name="M:Cashrewards3API.Features.CardLinkedMerchant.CardLinkedMerchantController.CardLinkedMerchantsSearch(System.String)">
+            <summary>
+            Get all linked cars for mercahants
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Category.CategoryController.RootCategorySearch(Cashrewards3API.Features.Category.Status)">
+            <summary>
+            Get all categories.
+            </summary>
+            <returns>Get matter settings.</returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Category.CategoryController.SubCategories(System.Nullable{System.Int32},Cashrewards3API.Features.Category.Status)">
+            <summary>
+            Get all sub categories for a root category ID
+            </summary>
+            <returns>Get matter settings.</returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Category.CategoryInternalController.RootCategorySearch(Cashrewards3API.Features.Category.Status)">
+            <summary>
+            Get all categories for internal access only.
+            </summary>
+            <returns>Get matter settings.</returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Category.CategoryPublicController.RootCategorySearch(Cashrewards3API.Features.Category.Status)">
+            <summary>
+            Get all categories including merchant counts.
+            </summary>
+            <returns>Get matter settings.</returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.CmsTrackingMerchantController.GetMerchantList(Cashrewards3API.Features.Merchant.Models.CmsTrackingMerchantSearchFilterRequestModel)">
+            <summary>
+            Get paged list of merchants, regarless of merchant tiers.
+            </summary>
+            <param name="requestModel">A query filter class generated from the query parameters
+            of the search url
+            </param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.MemberClick.WoolworthsEncryptionProvider.Encrypt(System.String,System.String)">
+            <summary>
+            Encrypts plaintext using AES 128bit key and a Chain Block Cipher and returns a base64 encoded string
+            </summary>
+            <param name="plainText">Plain text to encrypt</param>
+            <param name="key">Secret key</param>
+            <returns>Base64 encoded string</returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Member.MemberInternalController.GetMemberById(System.Int32)">
+            <summary>
+            Gets a member by id. If not found a 404 response
+            is returned.
+            </summary>
+            <param name="memberId"></param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="404">Not Found</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Member.MemberInternalController.GetMemberNewId(System.String,System.Int32)">
+            <summary>
+            Members have one MemberNewId for each ClientId. Cr/Max/MME
+            This endpoint will take a MemberNewId for a user return the MemberNewId for that user that matches the supplied ClientId
+            eg; Max (ClientId: 1000034) MemberNewId to Cr (ClientId: 1000000) MemberNewId
+            </summary>
+            <param name="sourceMemberNewId">Known MemberNewId of a user</param>
+            <param name="targetClientId">Desired MemberNewId matching this ClientId</param>
+            <returns>MemberNewId for the Member with the supplied MemberNewId that matches the supplied ClientId</returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Member.Service.MemberService.UpdateMemberLastLogon(Cashrewards3API.Features.Member.Model.MemberModel)">
+            <summary>
+            Updates the member last logon and LastLogonUTC values.
+            </summary>
+            <param name="model">The model.</param>
+        </member>
+        <member name="M:Cashrewards3API.Features.Member.Service.MemberService.CreateMemberPassword(Cashrewards3API.Features.Member.Model.MemberModel,System.String)">
+            <summary>
+            Creates the member password.
+            </summary>
+            <param name="member">The member.</param>
+            <param name="plainPassword">The plain password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Member.Service.MemberService.GetCognitoMemberByMemberIdCognitoIdCognitoPoolId(System.Int32,System.Guid,System.String)">
+            <summary>
+            Gets the cognito member by member identifier cognito identifier cognito pool identifier.
+            </summary>
+            <param name="memberId">Member ID.</param>
+            <param name="cognitoId">Cognito ID</param>
+            <param name="cognitoPoolId">CognitoPoolID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Member.Service.MemberService.GetCognitoMemberByMemberId(System.Int32)">
+            <summary>
+            Gets the cognito member by member identifier.
+            </summary>
+            <param name="memberId">The member identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Member.Service.MemberService.UpdateCognitoMemberTable(Cashrewards3API.Features.Member.Model.MemberModel,System.String)">
+            <summary>
+            Updates the cognito member table.
+            </summary>
+            <param name="model">The model.</param>
+            <param name="newCognitoId">The new cognito identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Member.Service.MemberService.GetTRAuthToken(Cashrewards3API.Common.Dto.MemberContextModel)">
+            <summary>
+            Gets the tr authentication token.
+            </summary>
+            <param name="memberContextModel">The member context model.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Member.Service.MemberService.MapMembersMemberNewIdToMemberNewIdWithClientId(System.String,System.Int32)">
+            <summary>
+            Members have one MemberNewId for each ClientId. Cr/Max/MME
+            This endpoint will take a MemberNewId for a user return the MemberNewId for that user that matches the supplied ClientId
+            eg; Max (ClientId: 1000034) MemberNewId to Cr (ClientId: 1000000) MemberNewId
+            </summary>
+            <param name="sourceMemberNewId">Known MemberNewId of a user</param>
+            <param name="targetClientId">Desired MemberNewId matching this ClientId</param>
+            <returns>MemberNewId for the Member with the supplied MemberNewId that matches the supplied ClientId</returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantController.GetMerchantBundle(System.String,System.Int32,System.Int32)">
+            <summary>
+            Get paged list of merchants
+            </summary>
+            <param name="filter"></param>
+            <param name="offset"></param>
+            <param name="limit"></param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantController.GetMerchantBundle(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="merchantId"></param>
+             <returns></returns>
+             <response code="200">OK</response>
+             <response code="400">Bad Request</response>
+             <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantController.GetMerchantBundleByHyphenatedString(System.String)">
+            <summary>
+            Get merchant bundle by hyphenatedString
+            </summary>
+            <param name="hyphenatedString"></param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantController.GetPopularMerchants(System.Int32,System.Int32)">
+            <summary>
+            Get popular merchants for browser
+            </summary>
+            <param name="offset"></param>
+            <param name="limit"></param>
+            <returns>Get matter settings.</returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantController.GetPopularMerchantsForMobile(System.Int32,System.Int32)">
+            <summary>
+            Get popular merchants for mobile
+            </summary>
+            <param name="offset"></param>
+            <param name="limit"></param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantController.GetTrendingStoresForBrowser(System.String,System.Int32,System.Int32)">
+            <summary>
+            Get trending merchants for browser
+            </summary>
+            <param name="filter"></param>
+            <param name="offset"></param>
+            <param name="limit"></param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantController.GetTrendingStoresForMobile(System.String,System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="filter"></param>
+             <param name="offset"></param>
+             <param name="limit"></param>
+             <returns></returns>
+             <response code="200">OK</response>
+             <response code="400">Bad Request</response>
+             <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantController.GetMerchantBundle(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get paged list of all merchants for the all stores page
+            </summary>
+            <param name="categoryId"></param>
+            <param name="offset"></param>
+            <param name="limit"></param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="T:Cashrewards3API.Features.Merchant.MerchantInternalController">
+            <summary>
+            Merchant's end point used by promo microservice api
+            Also now includes some eftpos transaction transformer lambda endpoints
+            </summary>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantInternalController.GetMerchants(Cashrewards3API.Features.Merchant.Models.MerchantByFilterRequestModel)">
+            <summary>
+            Get paged list of merchants
+            </summary>
+            <param name="requestModel">A query filter class generated from the query parameters
+            of the search url
+            </param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantInternalController.GetCategoriesByMerchantById(System.Int32)">
+            <summary>
+            Get paged list of merchants
+            </summary>
+            <param name="id">Merchant Id</param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantInternalController.GetMerchantById(System.Int32)">
+            <summary>
+            Get paged list of merchants
+            </summary>
+            <param name="id">Merchant Id</param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="T:Cashrewards3API.Features.Merchant.MerchantTierInternalController">
+            <summary>
+            Merchants tier's end point used by promo microservice api
+            Also now includes some eftpos transaction transformer lambda endpoints
+            </summary>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantTierInternalController.CreateMerchantTier(Cashrewards3API.Features.Merchant.Models.CreateInternalMerchantTierRequestModel)">
+            <summary>
+            Creates a merchant tier and its corresponding cash rewards merchant tier client
+            if they do not exist. If they already exist, they will not be created and the
+            existing merchant tier will be returned.
+            </summary>
+            <param name="requestModel"></param>
+            <response code="201">Created</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantTierInternalController.UpdateMerchantTier(System.Int32,Cashrewards3API.Features.Merchant.Models.UpdateInternalMerchantTierRequestModel)">
+            <summary>
+            Updates a merchant tier and its corresponding cash rewards merchant tier client.
+            </summary>
+            <param name="merchantTierId"></param>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantTierInternalController.DeactivateMerchantTier(System.Int32)">
+            <summary>
+            Updates a merchant tier and its corresponding cash rewards merchant tier client to be inactive.
+            </summary>
+            <param name="merchantTierId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantTierInternalController.IsMerchantTierClient(System.Int32,System.Int32,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="merchantTierId"></param>
+            <param name="clientId"></param>
+            <param name="dateTimeUtc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantTierInternalController.GetMerchantActiveMerchantTiers(System.Int32,System.DateTime,System.Nullable{System.Int32})">
+            <summary>
+            API for eftpos transformer lambda to access merchant tiers
+            Return only required data if a merchant tier was found for the merchant at the time given
+            </summary>
+            <param name="merchantId">Merchant to check</param>
+            <param name="dateTimeUtc">UTCDate time to check</param>
+            <param name="top">Limit returned responses to this many. No order guarentee.</param>
+            <returns>Important merchant tier columns with some extra merchant and network columns.</returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="401">Forbidden Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantInternalService.ExistsMerchantTierClient(System.Int32,System.Int32,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="merchantTierId"></param>
+            <param name="clientId"></param>
+            <param name="dateTimeUtc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantInternalService.GetActiveMerchantTiers(System.Int32,System.DateTime,System.Nullable{System.Int32})">
+            <summary>
+            Returns active merchant tiers for a merchant at a specified time
+            </summary>
+            <param name="merchantId">Cashrewards merchantid</param>
+            <param name="dateTimeUtc">time to check for a merchant tier by merchantId</param>
+            <param name="top">Only return this many matches</param>
+            <returns>List of active merchant tiers</returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantInternalService.GetMerchantTiers(System.Int32,System.DateTime,Cashrewards3API.Enum.MerchantTierStatusTypeEnum,System.Nullable{System.Int32})">
+            <summary>
+            Returns merchant tiers for a merchant at a specified time with the specified status
+            An adaptor to turn a single status into an array to use the generic function
+            </summary>
+            <param name="merchantId">Cashrewards merchantid</param>
+            <param name="dateTimeUtc">time to check for a merchant tier by merchantId</param>
+            <param name="status">Status to check. Active/Inactive/Deleted</param>
+            <param name="top">Only return this many matches</param>
+            <returns>List of merchant tiers matching the status</returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantInternalService.GetMerchantTiers(System.Int32,System.DateTime,Cashrewards3API.Enum.MerchantTierStatusTypeEnum[],System.Nullable{System.Int32})">
+            <summary>
+            Merchant Tiers with limited columns returned for eftpos transformer
+            </summary>
+            <param name="merchantId">Cashrewards merchantid</param>
+            <param name="dateTimeUtc">time to check for a merchant tier by merchantId</param>
+            <param name="statusList">statuss to check. Empty list for all</param>
+            <param name="top">Only return this many matches</param>
+            <returns>List of merchant tiers</returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Merchant.MerchantInternalService.GetMerchantTierQuery(System.Int32,System.DateTime,Cashrewards3API.Enum.MerchantTierStatusTypeEnum[],System.Nullable{System.Int32})">
+            <summary>
+            Generate the GetMerchantTierQuery
+            </summary>
+            <param name="merchantId">cr merchantid</param>
+            <param name="dateTimeUtc"></param>
+            <param name="statusList"></param>
+            <param name="top">return all or limit to this amount</param>
+            <returns>A query string to get merchant tiers</returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Offers.OfferController.GetFeaturedOffersForMobile(System.String,System.Int32,System.Int32)">
+            <summary>
+            Get featured offers for clientId
+            </summary>
+            <param name="filter"></param>
+            <param name="offset"></param>
+            <param name="limit"></param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Offers.OfferController.GetFeaturedOffers(System.String,System.Int32,System.Int32)">
+            <summary>
+            Get featured offers for clientId
+            </summary>
+            <param name="filter"></param>
+            <param name="offset"></param>
+            <param name="limit"></param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Offers.OfferController.GetCashbackIncreasedOffers">
+            <summary>
+            Get cashback increased offers for browswer
+            </summary>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Offers.OfferController.GetCashbackIncreasedOffersForMobile">
+            <summary>
+             Get cashback increased offers for mobile
+            </summary>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Offers.OfferService.GetSpecialOffers(System.Int32,System.Nullable{System.Int32},System.Nullable{Cashrewards3API.Enum.OfferTypeEnum},System.Boolean)">
+            <summary>
+            Gets the special offers, CashBack Increased or Premium Feature Offers
+            </summary>
+            <param name="clientId">The client identifier.</param>
+            <param name="premiumClientId">The premium client identifier.</param>
+            <param name="offertype">The offertype. this is not required paramter in case you want only one type of offer</param>
+            <param name="isMobile">Get offers for mobile.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Offers.OfferService.MapPremiumOfferToOffer(System.Collections.Generic.IEnumerable{Cashrewards3API.Features.Offers.OfferViewModel},System.Collections.Generic.IEnumerable{Cashrewards3API.Features.Offers.OfferViewModel},System.Nullable{System.Int32},System.Boolean)">
+            <summary>
+            Maps the offer to premium offer if applicable.
+            </summary>
+            <param name="offers">The offers.</param>
+            <param name="premiumClientId">The premium client identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Person.PersonController.getMemberIdFromPersonIdAndClientId(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="personId"></param>
+            <param name="clientId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Person.Service.PersonService.GetPerson(System.String)">
+            <summary>
+            Gets the person.
+            </summary>
+            <param name="cognitoId">The cognito identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Person.Service.PersonService.GetPersonFromDb(System.String)">
+            <summary>
+            Gets the person by Cognito Id
+            </summary>
+            <param name="cognitoId">The cognito identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Person.Service.PersonService.UpdatePersonPremiumHistory(Cashrewards3API.Features.Person.Model.PersonModel)">
+            <summary>
+            Updates the PersonPremiumStatusHistory and adds a new record with the new status
+            </summary>
+            <param name="person"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Proxies.ProxiesController.Search(System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Get search results
+            </summary>
+            <param name="q">Query request</param>
+            <param name="sort">Sorting by relevance/cashback/merchantname. ( format = [fieldname]:[asc/desc] | example \"cashback:desc,merchantname:asc\</param>
+            <param name="per_page">Specify the number of records to return in one request</param>
+            <param name="page">specify the page of results to return (start from 1)</param>
+            <param name="_clientid">ClientId</param>
+            <param name="_token">JWT Access token</param>
+            <param name="fields">Required fields, comma separated</param>
+            <returns>Search response</returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Proxies.ProxiesController.MerchantMapByAuthId(System.String)">
+            <summary>
+             Get merchant mapping details from mastercard auth merchant id.
+            </summary>
+            <param name="authMerchantId">mastercard auth merchant id</param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Proxies.ProxiesController.MerchantMapByLocationId(System.Int32)">
+            <summary>
+             Get merchant mapping details from mastercard merchant location id.
+            </summary>
+            <param name="locationId">mastercard merchant location id</param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.ShopGoClient.ShopGoClientController.GetClients">
+            <summary>
+            Get all active shopgo clients
+            </summary>
+            <returns>Get matter settings.</returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.ShopGoClient.ShopGoClientService.GetShopGoClients">
+            <summary>
+            Returns only active clients where Status is Active
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Transaction.TransactionController.CreateTransaction(Cashrewards3API.Features.Transaction.TransactionDto)">
+            <summary>
+            Post card transaction
+            </summary>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Features.Transaction.TransactionController.GetMemberTransactions(System.Int32,System.Int32)">
+            <summary>
+            get member transactions 
+            </summary>
+            <param name="limit"></param>
+            <param name="offset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Features.Transaction.TransactionInternalController.GetTransactionDetailForSaleAdjustment(System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            get sale transactions 
+            </summary>
+            <param name="clickId"></param>
+            <param name="transactionId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cashrewards3API.Internals.BonusTransaction.TransactionController">
+            <summary>
+            An internal route for promotion microservice to use inorder
+            to interactive with MSSQL.
+            </summary>
+        </member>
+        <member name="M:Cashrewards3API.Internals.BonusTransaction.TransactionController.GetBonusTransactionById(System.Int32)">
+            <summary>
+            Gets bonus transaction by id.
+            </summary>
+            <param name="transactionId"></param>
+            <response code="200">Success</response>
+            <response code="404">Not Found</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:Cashrewards3API.Internals.BonusTransaction.TransactionController.CreateBonusTransaction(Cashrewards3API.Internals.BonusTransaction.Models.CreateBonusTransactionRequestModel)">
+            <summary>
+            Creates a new bonus transaction and dependant models which includes a
+            transaction tier, merchant tier (if not existing) and merchant tier client.
+            </summary>
+            <param name="requestModel"></param>
+            <response code="201">Created</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Internals.BonusTransaction.TransactionController.ApproveBonusTransaction(System.Int32)">
+            <summary>
+            Approves an existing bonus transaction.
+            </summary>
+            <param name="transactionId"></param>
+            <response code="200">Success</response>
+            <response code="404">Not Found</response>
+            <response code="500">Internal Server Error</response>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Internals.BonusTransaction.TransactionController.DeclineBonusTransaction(System.Int32)">
+            <summary>
+            Declines an existing bonus transaction.
+            </summary>
+            <param name="transactionId"></param>
+            <response code="200">Success</response>
+            <response code="404">Not Found</response>
+            <response code="500">Internal Server Error</response>
+            <returns></returns>
+        </member>
+        <member name="T:Cashrewards3API.Internals.BonusTransaction.CreateBonusTransactionSqlTransaction">
+            <summary>
+            A class to help execute the creation of a bonus transaction and its associated models
+            (transaction tier, merchant tier and merchant tier client)
+            in a single sql transaction.
+            </summary>
+        </member>
+        <member name="M:Cashrewards3API.Internals.BonusTransaction.CreateBonusTransactionSqlTransaction.Execute(Cashrewards3API.Internals.BonusTransaction.Models.CreateBonusTransactionRequestModel,Cashrewards3API.Internals.BonusTransaction.Models.BonusTransaction)">
+            <summary>
+            Executes a sql transaction to create bonus transaction (A transaction), transaction tier,
+            merchant tier client and potentially a merchant tier if existing one does not exist.
+            </summary>
+            <param name="requestModel"></param>
+            <param name="bonusTransactionToCreate"></param>
+            <returns>Ids of the created/existing models</returns>
+        </member>
+        <member name="M:Cashrewards3API.Mapper.MerchantProfile.GetTrackingTimeMin(System.String)">
+            <summary>
+            Returns the minimum tracking time if present for a merchant.
+            Attempts to match case where "*{minimum} to {maximum} day*"
+            is present in the string for the minimum value.
+            Eg; "1 to 7 days5" resolves to 1
+            </summary>
+            <param name="trackingTime">Entry in [ShopGo].[dbo].[Merchant][TrackingTime]</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Mapper.MerchantProfile.GetTrackingTimeMax(System.String)">
+            <summary>
+            Returns the maximum tracking time if present for a merchant.
+            Attempts to match case where "*{days} day*"
+            is present in the string for the maximum value
+            Eg; "1 to 7 days5" resolves to 7
+            </summary>
+            <param name="trackingTime">Entry in [ShopGo].[dbo].[Merchant][TrackingTime]</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cashrewards3API.Mapper.MerchantProfile.GetApprovalTime(System.String)">
+            <summary>
+            Returns the approval time if present for a merchant.
+            Attempts to match multiple cases due to the inconsistant
+            data in the table column.
+            "maximum {days} day*", "up to {days} day*"
+            "*up to {days}", "*up to {days}day*"
+            "{days} day*"
+            Eg; "maximum 7 day9" resolves to 7
+            </summary>
+            <param name="strApprovalTime">Entry in [ShopGo].[dbo].[Merchant][ApprovalTime]</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
